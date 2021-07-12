@@ -1,0 +1,419 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.10">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаНомерДатаСтатус" id="63">
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа номер дата статус</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Representation>NormalSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаНомерДатаСтатусРасширеннаяПодсказка" id="64"/>
+			<ChildItems>
+				<InputField name="Номер" id="1">
+					<DataPath>Объект.Number</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+				</InputField>
+				<InputField name="Дата" id="4">
+					<DataPath>Объект.Date</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>от</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Проект" id="7">
+			<DataPath>Объект.Проект</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<DropListButton>true</DropListButton>
+			<QuickChoice>true</QuickChoice>
+			<ContextMenu name="ПроектКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ПроектРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="Менеджер" id="10">
+			<DataPath>Объект.Менеджер</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<DropListButton>true</DropListButton>
+			<QuickChoice>true</QuickChoice>
+			<ContextMenu name="МенеджерКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="МенеджерРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<UsualGroup name="ГруппаКомандыТЧ" id="100">
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа команды ТЧ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКомандыТЧРасширеннаяПодсказка" id="101"/>
+			<ChildItems>
+				<Button name="ЗаполнитьДеревоЗадачИПрограммистов" id="65">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ЗаполнитьДеревоЗадачИПрограммистов</CommandName>
+					<ExtendedTooltip name="ЗаполнитьДеревоЗадачИПрограммистовРасширеннаяПодсказка" id="66"/>
+				</Button>
+				<Button name="КомандаРаспределитьЗадачиНаПрограммистов" id="67">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<CommandName>Form.Command.КомандаРаспределитьЗадачиНаПрограммистов</CommandName>
+					<Picture>
+						<xr:Ref>StdPicture.GenerateReport</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="КомандаРаспределитьЗадачиНаПрограммистовРасширеннаяПодсказка" id="68"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="ДеревоЗадачИПрограммистов" id="102">
+			<Representation>Tree</Representation>
+			<ChangeRowSet>false</ChangeRowSet>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>ДеревоЗадачИПрограммистов</DataPath>
+			<CommandSet>
+				<ExcludedCommand>Add</ExcludedCommand>
+				<ExcludedCommand>Change</ExcludedCommand>
+				<ExcludedCommand>Copy</ExcludedCommand>
+				<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+				<ExcludedCommand>Delete</ExcludedCommand>
+				<ExcludedCommand>EndEdit</ExcludedCommand>
+				<ExcludedCommand>MoveDown</ExcludedCommand>
+				<ExcludedCommand>MoveUp</ExcludedCommand>
+				<ExcludedCommand>SelectAll</ExcludedCommand>
+				<ExcludedCommand>ShowMultipleSelection</ExcludedCommand>
+				<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+			</CommandSet>
+			<ContextMenu name="ДеревоЗадачИПрограммистовКонтекстноеМеню" id="103"/>
+			<AutoCommandBar name="ДеревоЗадачИПрограммистовКоманднаяПанель" id="104">
+				<ChildItems>
+					<Button name="ДеревоЗадачИПрограммистовСортироватьСписокПоВозрастанию" id="133">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.ДеревоЗадачИПрограммистов.StandardCommand.SortListAsc</CommandName>
+						<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+						<ExtendedTooltip name="ДеревоЗадачИПрограммистовСортироватьСписокПоВозрастаниюРасширеннаяПодсказка" id="134"/>
+					</Button>
+					<Button name="ДеревоЗадачИПрограммистовСортироватьСписокПоУбыванию" id="135">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.ДеревоЗадачИПрограммистов.StandardCommand.SortListDesc</CommandName>
+						<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+						<ExtendedTooltip name="ДеревоЗадачИПрограммистовСортироватьСписокПоУбываниюРасширеннаяПодсказка" id="136"/>
+					</Button>
+					<Button name="ДеревоЗадачИПрограммистовВывестиСписок" id="137">
+						<Type>CommandBarButton</Type>
+						<Representation>Picture</Representation>
+						<CommandName>Form.Item.ДеревоЗадачИПрограммистов.StandardCommand.OutputList</CommandName>
+						<Picture>
+							<xr:Ref>StdPicture.OutputList</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+						<ExtendedTooltip name="ДеревоЗадачИПрограммистовВывестиСписокРасширеннаяПодсказка" id="138"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ДеревоЗадачИПрограммистовРасширеннаяПодсказка" id="105"/>
+			<SearchStringAddition name="ДеревоЗадачИПрограммистовСтрокаПоиска" id="106">
+				<AdditionSource>
+					<Item>ДеревоЗадачИПрограммистов</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДеревоЗадачИПрограммистовСтрокаПоискаКонтекстноеМеню" id="107"/>
+				<ExtendedTooltip name="ДеревоЗадачИПрограммистовСтрокаПоискаРасширеннаяПодсказка" id="108"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ДеревоЗадачИПрограммистовСостояниеПросмотра" id="109">
+				<AdditionSource>
+					<Item>ДеревоЗадачИПрограммистов</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДеревоЗадачИПрограммистовСостояниеПросмотраКонтекстноеМеню" id="110"/>
+				<ExtendedTooltip name="ДеревоЗадачИПрограммистовСостояниеПросмотраРасширеннаяПодсказка" id="111"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ДеревоЗадачИПрограммистовУправлениеПоиском" id="112">
+				<AdditionSource>
+					<Item>ДеревоЗадачИПрограммистов</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ДеревоЗадачИПрограммистовУправлениеПоискомКонтекстноеМеню" id="113"/>
+				<ExtendedTooltip name="ДеревоЗадачИПрограммистовУправлениеПоискомРасширеннаяПодсказка" id="114"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="BeforeRowChange">ДеревоЗадачИПрограммистовПередНачаломИзменения</Event>
+			</Events>
+			<ChildItems>
+				<InputField name="ДеревоЗадачИПрограммистовЗадача" id="118">
+					<DataPath>ДеревоЗадачИПрограммистов.Задача</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<DropListButton>false</DropListButton>
+					<ChoiceButton>false</ChoiceButton>
+					<ClearButton>false</ClearButton>
+					<SpinButton>false</SpinButton>
+					<OpenButton>true</OpenButton>
+					<CreateButton>false</CreateButton>
+					<QuickChoice>false</QuickChoice>
+					<TextEdit>false</TextEdit>
+					<ContextMenu name="ДеревоЗадачИПрограммистовЗадачаКонтекстноеМеню" id="119"/>
+					<ExtendedTooltip name="ДеревоЗадачИПрограммистовЗадачаРасширеннаяПодсказка" id="120"/>
+					<Events>
+						<Event name="StartChoice">ДеревоЗадачИПрограммистовЗадачаНачалоВыбора</Event>
+					</Events>
+				</InputField>
+				<InputField name="ДеревоЗадачИПрограммистовПрограммист" id="121">
+					<DataPath>ДеревоЗадачИПрограммистов.Программист</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<DropListButton>false</DropListButton>
+					<ChoiceButton>false</ChoiceButton>
+					<ClearButton>false</ClearButton>
+					<SpinButton>false</SpinButton>
+					<OpenButton>true</OpenButton>
+					<CreateButton>false</CreateButton>
+					<TextEdit>false</TextEdit>
+					<ContextMenu name="ДеревоЗадачИПрограммистовПрограммистКонтекстноеМеню" id="122"/>
+					<ExtendedTooltip name="ДеревоЗадачИПрограммистовПрограммистРасширеннаяПодсказка" id="123"/>
+					<Events>
+						<Event name="StartChoice">ДеревоЗадачИПрограммистовПрограммистНачалоВыбора</Event>
+					</Events>
+				</InputField>
+				<InputField name="ДеревоЗадачИПрограммистовПриоритетПрограммиста" id="124">
+					<DataPath>ДеревоЗадачИПрограммистов.ПриоритетПрограммиста</DataPath>
+					<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<EditMode>EnterOnInput</EditMode>
+					<SpinButton>true</SpinButton>
+					<BorderColor>style:FormTextColor</BorderColor>
+					<ContextMenu name="ДеревоЗадачИПрограммистовПриоритетПрограммистаКонтекстноеМеню" id="125"/>
+					<ExtendedTooltip name="ДеревоЗадачИПрограммистовПриоритетПрограммистаРасширеннаяПодсказка" id="126"/>
+				</InputField>
+				<InputField name="ДеревоЗадачИПрограммистовПриоритетМенеджера" id="127">
+					<DataPath>ДеревоЗадачИПрограммистов.ПриоритетМенеджера</DataPath>
+					<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<EditMode>EnterOnInput</EditMode>
+					<SpinButton>true</SpinButton>
+					<ContextMenu name="ДеревоЗадачИПрограммистовПриоритетМенеджераКонтекстноеМеню" id="128"/>
+					<ExtendedTooltip name="ДеревоЗадачИПрограммистовПриоритетМенеджераРасширеннаяПодсказка" id="129"/>
+				</InputField>
+				<CheckBoxField name="ДеревоЗадачИПрограммистовЗадачаРаспределена" id="130">
+					<DataPath>ДеревоЗадачИПрограммистов.ЗадачаРаспределена</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ДеревоЗадачИПрограммистовЗадачаРаспределенаКонтекстноеМеню" id="131"/>
+					<ExtendedTooltip name="ДеревоЗадачИПрограммистовЗадачаРаспределенаРасширеннаяПодсказка" id="132"/>
+				</CheckBoxField>
+			</ChildItems>
+		</Table>
+		<InputField name="Комментарий" id="13">
+			<DataPath>Объект.Комментарий</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<HorizontalStretch>true</HorizontalStretch>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="15"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.РаспределениеЗадачПоПрограммистам</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+		<Attribute name="ДеревоЗадачИПрограммистов" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дерево задач и программистов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<Columns>
+				<Column name="НомерСтроки" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер строки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>5</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Задача" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Задача</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ПроектыИЗадачи</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Программист" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Программист</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Сотрудники</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ПриоритетПрограммиста" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Приоритет программиста</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>1</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПриоритетМенеджера" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Приоритет менеджера</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>1</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЗадачаРаспределена" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Задача распределена</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ДеревоЗадачИПрограммистовПриоритетПрограммиста</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоЗадачИПрограммистовПриоритетМенеджера</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ДеревоЗадачИПрограммистов.НомерСтроки</dcsset:left>
+						<dcsset:comparisonType>NotEqual</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:HoneyDew</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ДеревоЗадачИПрограммистов</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ДеревоЗадачИПрограммистов.НомерСтроки</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:FloralWhite</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаРаспределитьЗадачиНаПрограммистов" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Распределить задачи на программистов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Распределить задачи на программистов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаРаспределитьЗадачиНаПрограммистов</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+		</Command>
+		<Command name="ЗаполнитьДеревоЗадачИПрограммистов" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить таблицу</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить дерево задач и программистов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьДеревоЗадачИПрограммистов</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+		</Command>
+	</Commands>
+</Form>

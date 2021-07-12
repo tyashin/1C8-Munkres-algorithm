@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ConfigDumpInfo xmlns="http://v8.1c.ru/8.3/xcf/dumpinfo" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" format="Hierarchical" version="2.10">
+	<ConfigVersions>
+		<Metadata name="Catalog.ПроектныеРоли" id="1047539c-9809-11e8-9e84-00e04d918d78" configVersion="4ec3429e1ef5e811b68000e04d918d7800000000"/>
+		<Metadata name="Catalog.ПроектныеРоли.Predefined" id="1047539c-9809-11e8-9e84-00e04d918d78.1c" configVersion="40e72d9d1ef5e811b68000e04d918d7800000000"/>
+		<Metadata name="Catalog.ПроектыИЗадачи" id="386d2b3c-9804-11e8-9e84-00e04d918d78" configVersion="d0596dc3d9dbe811409300e04d918d7800000000">
+			<Metadata name="Catalog.ПроектыИЗадачи.Attribute.ОписаниеЗадачи" id="386865e2-dbce-11e8-6485-00e04d918d78"/>
+			<Metadata name="Catalog.ПроектыИЗадачи.Attribute.МенеджерПроекта" id="3e080c4e-980a-11e8-9e84-00e04d918d78"/>
+			<Metadata name="Catalog.ПроектыИЗадачи.Attribute.ОписаниеПроекта" id="57ab5184-9804-11e8-9e84-00e04d918d78"/>
+			<Metadata name="Catalog.ПроектыИЗадачи.Attribute.Завершено" id="9a5f923e-dbce-11e8-6485-00e04d918d78"/>
+		</Metadata>
+		<Metadata name="Catalog.ПроектыИЗадачи.Form.ФормаГруппы" id="281cfcb0-dbcf-11e8-6485-00e04d918d78" configVersion="42e8efd0d5dbe811409300e04d918d7800000000"/>
+		<Metadata name="Catalog.ПроектыИЗадачи.Form.ФормаГруппы.Form" id="281cfcb0-dbcf-11e8-6485-00e04d918d78.0" configVersion="f0adefd0d5dbe811409300e04d918d7800000000"/>
+		<Metadata name="Catalog.ПроектыИЗадачи.Form.ФормаСписка" id="fbceda70-dbc9-11e8-6485-00e04d918d78" configVersion="a652dd76d8dbe811409300e04d918d7800000000"/>
+		<Metadata name="Catalog.ПроектыИЗадачи.Form.ФормаСписка.Form" id="fbceda70-dbc9-11e8-6485-00e04d918d78.0" configVersion="86fadc76d8dbe811409300e04d918d7800000000"/>
+		<Metadata name="Catalog.ПроектыИЗадачи.Form.ФормаЭлемента" id="cbcaf5b6-dbce-11e8-6485-00e04d918d78" configVersion="564672c8d5dbe811409300e04d918d7800000000"/>
+		<Metadata name="Catalog.ПроектыИЗадачи.Form.ФормаЭлемента.Form" id="cbcaf5b6-dbce-11e8-6485-00e04d918d78.0" configVersion="de0472c8d5dbe811409300e04d918d7800000000"/>
+		<Metadata name="Catalog.Сотрудники" id="ab894332-95d0-11e8-628a-00e04d918d78" configVersion="88518c08d0dbe811648500e04d918d7800000000">
+			<Metadata name="Catalog.Сотрудники.Attribute.ОсновнаяРольВПроектах" id="8783477a-95d1-11e8-628a-00e04d918d78"/>
+		</Metadata>
+		<Metadata name="Catalog.Сотрудники.Form.ФормаВыбора" id="fc253842-dbcf-11e8-6485-00e04d918d78" configVersion="4a448c08d0dbe811648500e04d918d7800000000"/>
+		<Metadata name="Catalog.Сотрудники.Form.ФормаВыбора.Form" id="fc253842-dbcf-11e8-6485-00e04d918d78.0" configVersion="480a8c08d0dbe811648500e04d918d7800000000"/>
+		<Metadata name="Catalog.Сотрудники.Form.ФормаСписка" id="dfd15444-dbc7-11e8-6485-00e04d918d78" configVersion="ae4e8c08d0dbe811648500e04d918d7800000000"/>
+		<Metadata name="Catalog.Сотрудники.Form.ФормаСписка.Form" id="dfd15444-dbc7-11e8-6485-00e04d918d78.0" configVersion="727d5cfacfdbe811648500e04d918d7800000000"/>
+		<Metadata name="Catalog.Сотрудники.Form.ФормаЭлемента" id="8c5235e0-dbc2-11e8-6485-00e04d918d78" configVersion="7267a1cec7dbe811648500e04d918d7800000000"/>
+		<Metadata name="Catalog.Сотрудники.Form.ФормаЭлемента.Form" id="8c5235e0-dbc2-11e8-6485-00e04d918d78.0" configVersion="7244a1cec7dbe811648500e04d918d7800000000"/>
+		<Metadata name="CommonPicture.ОбщаяКартинкаУправлениеПроектами" id="9dad31d4-dbd9-11e8-4093-00e04d918d78" configVersion="98696dc3d9dbe811409300e04d918d7800000000"/>
+		<Metadata name="CommonPicture.ОбщаяКартинкаУправлениеПроектами.Picture" id="9dad31d4-dbd9-11e8-4093-00e04d918d78.0" configVersion="1c92cebfd9dbe811409300e04d918d7800000000"/>
+		<Metadata name="Configuration.УпрощенныйПроектныйМенеджмент" id="4a104aee-95ce-11e8-628a-00e04d918d78" configVersion="4aac42f442f5e811548e00e04d918d7800000000"/>
+		<Metadata name="Configuration.УпрощенныйПроектныйМенеджмент.CommandInterface" id="4a104aef-95ce-11e8-628a-00e04d918d78.a" configVersion="8c59845cc3dbe811648500e04d918d7800000000"/>
+		<Metadata name="Configuration.УпрощенныйПроектныйМенеджмент.HomePageWorkArea" id="4a104aef-95ce-11e8-628a-00e04d918d78.8" configVersion="969bf1c83df5e811548e00e04d918d7800000000"/>
+		<Metadata name="Configuration.УпрощенныйПроектныйМенеджмент.MainSectionCommandInterface" id="4a104aef-95ce-11e8-628a-00e04d918d78.9" configVersion="866c42f5d7dbe811409300e04d918d7800000000"/>
+		<Metadata name="Document.РаспределениеЗадачПоПрограммистам" id="86d30f29-95d2-11e8-628a-00e04d918d78" configVersion="0ced7d474df5e811548e00e04d918d7800000000">
+			<Metadata name="Document.РаспределениеЗадачПоПрограммистам.TabularSection.ЗадачиПоПрограммистам.Attribute.Программист" id="01e7f230-f109-11e8-1194-00e04d918d78"/>
+			<Metadata name="Document.РаспределениеЗадачПоПрограммистам.Attribute.Менеджер" id="19abde22-95d3-11e8-628a-00e04d918d78"/>
+			<Metadata name="Document.РаспределениеЗадачПоПрограммистам.TabularSection.ЗадачиПоПрограммистам.Attribute.Задача" id="344452fa-2289-44af-86e9-171a23ea5dbd"/>
+			<Metadata name="Document.РаспределениеЗадачПоПрограммистам.TabularSection.ЗадачиПоПрограммистам" id="5a60cc40-95d6-11e8-628a-00e04d918d78"/>
+			<Metadata name="Document.РаспределениеЗадачПоПрограммистам.Attribute.Комментарий" id="75de172a-95d6-11e8-628a-00e04d918d78"/>
+			<Metadata name="Document.РаспределениеЗадачПоПрограммистам.Attribute.РазмерностьМатрицы" id="9d88c1ee-f431-11e8-2a89-00e04d918d78"/>
+			<Metadata name="Document.РаспределениеЗадачПоПрограммистам.TabularSection.ЗадачиПоПрограммистам.Attribute.ПриоритетПрограммиста" id="b36a686c-f109-11e8-1194-00e04d918d78"/>
+			<Metadata name="Document.РаспределениеЗадачПоПрограммистам.Attribute.Проект" id="b5ad4268-9806-11e8-9e84-00e04d918d78"/>
+			<Metadata name="Document.РаспределениеЗадачПоПрограммистам.TabularSection.ЗадачиПоПрограммистам.Attribute.ПриоритетМенеджера" id="ca1eebfa-f109-11e8-1194-00e04d918d78"/>
+			<Metadata name="Document.РаспределениеЗадачПоПрограммистам.TabularSection.ЗадачиПоПрограммистам.Attribute.ЗадачаРаспределена" id="d10de566-f10d-11e8-1194-00e04d918d78"/>
+		</Metadata>
+		<Metadata name="Document.РаспределениеЗадачПоПрограммистам.Form.ФормаДокумента" id="eacca8c3-d7db-4c28-b66e-e3fb3c61f2e8" configVersion="c4b1642001f6e8113b9c00e04d918d7800000000"/>
+		<Metadata name="Document.РаспределениеЗадачПоПрограммистам.Form.ФормаДокумента.Form" id="eacca8c3-d7db-4c28-b66e-e3fb3c61f2e8.0" configVersion="7c68642001f6e8113b9c00e04d918d7800000000"/>
+		<Metadata name="Document.РаспределениеЗадачПоПрограммистам.Form.ФормаСписка" id="ceba1f74-f459-11e8-df94-00e04d918d78" configVersion="8cb3ecd659f4e811df9400e04d918d7800000000"/>
+		<Metadata name="Document.РаспределениеЗадачПоПрограммистам.Form.ФормаСписка.Form" id="ceba1f74-f459-11e8-df94-00e04d918d78.0" configVersion="84a11cd559f4e811df9400e04d918d7800000000"/>
+		<Metadata name="Document.РаспределениеЗадачПоПрограммистам.ObjectModule" id="86d30f29-95d2-11e8-628a-00e04d918d78.0" configVersion="a4c87d474df5e811548e00e04d918d7800000000"/>
+		<Metadata name="Language.Русский" id="4a104cba-95ce-11e8-628a-00e04d918d78" configVersion="74038139d095e811628a00e04d918d7800000000"/>
+		<Metadata name="Subsystem.УправлениеПроектами" id="88de2794-95d0-11e8-628a-00e04d918d78" configVersion="acdee71123f5e811b68000e04d918d7800000000"/>
+		<Metadata name="Subsystem.УправлениеПроектами.CommandInterface" id="88de2794-95d0-11e8-628a-00e04d918d78.1" configVersion="b6472016d8dbe811409300e04d918d7800000000"/>
+	</ConfigVersions>
+</ConfigDumpInfo>
